@@ -1,6 +1,8 @@
-import ExpenseItem from "./components/ExpenseIem";
+import Expenses from "./components/Expenses/Expenses";
 
-function App() {
+const App = () => {
+  //aici am facuto o functie arrow
+
   //am creat un array de obiectge pe care o sa le transferam in clasele instantiate expenseItem
   const expenses = [
     {
@@ -31,29 +33,10 @@ function App() {
     <div>
       <h2>Let's get started! x</h2>
 
-      <ExpenseItem
-        title={expenses[0].title}
-        amount={expenses[0].amount}
-        date={expenses[0].date}
-      ></ExpenseItem>
-      <ExpenseItem
-        title={expenses[1].title}
-        amount={expenses[1].amount}
-        date={expenses[1].date}
-      ></ExpenseItem>
-      <ExpenseItem
-        title={expenses[2].title}
-        amount={expenses[2].amount}
-        date={expenses[2].date}
-      ></ExpenseItem>
-      <ExpenseItem
-        title={expenses[3].title}
-        amount={expenses[3].amount}
-        date={expenses[3].date}
-      ></ExpenseItem>
+      <Expenses expenses={expenses}></Expenses>
     </div>
   );
   //in expense item am trecut ca parametri ce avem la pozitia respectiva a arraiului express,dupa aceasta trebuioe se trecem ca props in expenseItem
-}
+};
 
 export default App;
